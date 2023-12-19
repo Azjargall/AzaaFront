@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { useRouter } from 'next/router';
+import Link from "next/link";
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,11 +17,15 @@ export default function Home() {
                             src="https://centraltv.mn/wp-content/uploads/2022/05/Frame-51.png"
                             alt="" />
                         <div className="gap-8 text-white text-sm font-bold items-center hidden lg:flex">
-                            <a  className="text-lime-700 transition-all" href="">ЭХЛЭЛ</a>
-                            <a onClick={() => router.push('/')} className="hover:text-lime-700 transition-all" href="">НЭВТРҮҮЛГҮҮД</a>
-                            <a onClick={() => router.push('/huninots')} className="hover:text-lime-700 transition-all" href="">ХҮНИЙ НӨӨЦ</a>
-                            <a onClick={() => router.push('/bidniituhai')} className="hover:text-lime-700 transition-all" href="">БИДНИЙ ТУХАЙ</a>
-                            <a onClick={() => router.push('/hamtrah')} className="hover:text-lime-700 transition-all">ХАМТРАН АЖИЛЛАХ</a>
+                        <a className="text-lime-700 transition-all">ЭХЛЭЛ</a>
+                            <Link href='/rout3'>
+                            <button  className="hover:text-lime-700 transition-all " >НЭВТРҮҮЛГҮҮД</button></Link>
+                            <Link href='/huninots'>
+                            <button className="hover:text-lime-700 transition-all"/>ХҮНИЙ НӨӨЦ</Link>
+                            <Link href='/bidniituhai'>
+                            <button className="hover:text-lime-700 transition-all" />БИДНИЙ ТУХАЙ</Link>
+                            <Link href='/hamtrah'>
+                            <button  className="hover:text-lime-700 transition-all " >ХАМТРАН АЖИЛЛАХ</button></Link>
                         </div>
                     </div>
           
@@ -145,7 +150,7 @@ export default function Home() {
   </div>
   <div className='w-full h-[600px] dark:bg-black bg-gray-400 flex justify-center'>
     <div className='h-full w-[95%] flex flex-col items-start'>
-    <a className='my-[4%] text-white font-bold no-underline hover:underline text-2xl'>НЭВТРҮҮЛГҮҮД</a>
+    <a className='my-[4%] dark:text-white text-black font-bold no-underline hover:underline text-2xl'>НЭВТРҮҮЛГҮҮД</a>
     <div className='w-[90%] h-[70%]  md:w-full sm:w-full  flex flex-col xl:flex-row lg:flex-row md:flex-row '>
     <div className='h-[33%] xl:h-full lg:h-full md:h-full xl:w-[32%] lg:w-[32%] md:w-[32%] w-full mx-[1%] flex flex-col '>
       <div className='w-full h-[20%] flex items-center justify-around border-t-2 border-slate-300 border-b-2'>
@@ -215,10 +220,9 @@ export default function Home() {
     </div>
     </div>
   </div>
-
   </div>
-  <div className='w-full h-[800px] sm:h-[1100px] bg-black flex items-center justify-evenly flex-col'>
-    <a className='text-white font-bold text-2xl'>ХАМТРАГЧ БАЙГУУЛЛАГА</a>
+  <div className='w-full h-[800px] sm:h-[1100px] dark:bg-black bg-gray-400 flex items-center justify-evenly flex-col'>
+    <a className='text-black dark:bg-black  font-bold text-2xl'>ХАМТРАГЧ БАЙГУУЛЛАГА</a>
     <div className='h-full xl:h-[40%] lg:h-[40%] md:h-[40%] w-[90%] gap-2 grid xl:grid-cols-6 lg:grid-cols-6 md:grid-cols-6 grid-cols-1'>
       <div className="flex bg-[url('https://centraltv.mn/wp-content/uploads/2022/06/1.png')] bg-no-repeat"></div>
       <div className="flex bg-[url('https://centraltv.mn/wp-content/uploads/2022/06/2-1.png')] bg-no-repeat"></div>

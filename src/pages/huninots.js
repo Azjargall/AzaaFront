@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Home() {
     return (
         <div className="bg-neutral-950 h-screen">
@@ -9,12 +11,17 @@ export default function Home() {
                               src="https://centraltv.mn/wp-content/uploads/2022/05/Frame-51.png"
                               alt="" />
                           <div className="gap-8 text-white text-sm font-bold items-center hidden lg:flex">
-                              <a className="hover:text-lime-700 transition-all " href="">ЭХЛЭЛ</a>
-                              <a className="hover:text-lime-700 transition-all" href="">НЭВТРҮҮЛГҮҮД</a>
-                              <a className="hover:text-lime-700 transition-all" href="">ХҮНИЙ НӨӨЦ</a>
-                              <a className="hover:text-lime-700 transition-all" href="">БИДНИЙ ТУХАЙ</a>
-                              <a className="text-lime-700 transition-all">ХАМТРАН АЖИЛЛАХ</a>
-                          </div>
+                           <Link href='/'>
+                            <button  className="hover:text-lime-700 transition-all " >ЭХЛЭЛ</button></Link>
+                            <Link href='/rout3'>
+                            <button  className="hover:text-lime-700 transition-all " >НЭВТРҮҮЛГҮҮД</button></Link>
+                            <a className="text-lime-700 transition-all">ХҮНИЙ НӨӨЦ</a>
+                            <Link href='/bidniituhai'>
+                            <button className="hover:text-lime-700 transition-all" />БИДНИЙ ТУХАЙ</Link>
+                            <Link href='/hamtrah'>
+                            <button className="hover:text-lime-700 transition-all"/>ХАМТРАН АЖИЛЛАХ</Link>
+
+                        </div>
                       </div>
                 </div>
                 <img className="mt-12 z-10" src="https://centraltv.mn/wp-content/uploads/2022/06/1.svg" alt="" />
@@ -24,7 +31,7 @@ export default function Home() {
                     хамтран ажиллаж буй дэлхийн алдартай телевизийн нэвтрүүлэг, инээдмийн цуврал болон хүүхдийн цувралуудыг танд хүргэнэ.</p>
             </div>
   
-            <div className="w-full bg-neutral-950 p-12 gap-20 flex flex-col items-center">
+            <div className="w-full dark:bg-neutral-950 bg-gray-400 p-12 gap-20 flex flex-col items-center">
                 <div className="flex flex-col md:flex-row text-white font-light justify-between max-w-[960px] lg:max-w-[1200px] ">
                     <div className="w-full md:w-1/2 mb-10 md:mb-0">
                         <img src="https://centraltv.mn/wp-content/uploads/2022/06/First-captain-1.png" alt="" />

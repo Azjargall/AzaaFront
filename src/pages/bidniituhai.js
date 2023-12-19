@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function Home() {
     const router=useRouter();
     
     return (
-      <div className='w-full h-screen bg-black '>
+      <div className='w-full h-screen dark:bg-black  bg-gray-400'>
            <div className=" bg-cyan-400 w-full h-[680px] bg-[url(https://m.buro247.mn/thumb/750x480_5/images/centraltvrub.jpg)] bg-cover bg-center " >
                 <div className="w-full h-full ">
                     <div className="flex w-full p-12 py-10 gap-36 justify-around items-center z-50">
@@ -12,16 +13,20 @@ export default function Home() {
                             src="https://centraltv.mn/wp-content/uploads/2022/05/Frame-51.png"
                             alt="" />
                         <div className="gap-8 text-white text-sm font-bold items-center hidden lg:flex">
-                            <a onClick={() => router.push('/')} className="hover:text-lime-700 transition-all " href="">ЭХЛЭЛ</a>
-                            <a onClick={() => router.push('/')} className="hover:text-lime-700 transition-all" href="">НЭВТРҮҮЛГҮҮД</a>
-                            <a onClick={() => router.push('/huninots')} className="hover:text-lime-700 transition-all" href="">ХҮНИЙ НӨӨЦ</a>
-                            <a  className="text-lime-700 transition-all" href="">БИДНИЙ ТУХАЙ</a>
-                            <a onClick={() => router.push('/hamtrah')} className="hover:text-lime-700 transition-all">ХАМТРАН АЖИЛЛАХ</a>
+                          <Link href='/'>
+                            <button  className="hover:text-lime-700 transition-all " >ЭХЛЭЛ</button></Link>
+                            <Link href='/rout3'>
+                            <button  className="hover:text-lime-700 transition-all " >НЭВТРҮҮЛГҮҮД</button></Link>
+                            <Link href='/huninots'>
+                            <button className="hover:text-lime-700 transition-all"/>ХҮНИЙ НӨӨЦ</Link>
+                            <a className="text-lime-700 transition-all">БИДНИЙ ТУХАЙ</a>
+                            <Link href='/hamtrah'>
+                            <button className="hover:text-lime-700 transition-all" />ХАМТРАН АЖИЛЛАХ</Link>
                         </div>
                     </div>
                 </div>
             </div>
-          <div className='w-full h-full flex bg-black justify-around'>
+          <div className='w-full h-full flex dark:bg-black bg-slate-400 justify-around'>
           <div className='text-slate-50 font-light text-lg text-justify mt-16 w-3/5 leading-8 '>
               <p>“Централ телевиз” нь соёл, урлаг, спорт, шинжлэх ухаан, танин мэдэхүй нэвтрүүлэг хөтөлбөрөөр гоо зүйн боловсрол олгох зорилготой бүрэн энтертайнмент суваг юм. Бид оюуны өмчийг дээдлэн, ёс зүйн хэм хэмжээг баримталж, дотоод, гадаадын телевизүүдийн нэвтрүүлэг, инээдмийн болон хүүхдийн цуврал бүтээлүүдийг онцгой эрхтэйгээр үзэгч олондоо зориулан бүтээж, нэвтрүүлж байна.</p>
               <div className='flex flex-col mt-8 gap-4'>
@@ -45,7 +50,7 @@ export default function Home() {
             </div>
   
           </div>
-          <div className='w-full h-full bg-black flex flex-col xl:flex-row lg:flex-row md:flex-row'>
+          <div className='w-full h-full flex dark:bg-black bg-slate-400 flex flex-col xl:flex-row lg:flex-row md:flex-row'>
          <div className='w-[50%]  flex items-start justify-center sm:w-full h-[33%] xl:h-full lg:h-full md:h-full'>
           <div className="w-[90%] h-[90%] bg-[url('https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80')] bg-cover hover:bg-[url('https://img.freepik.com/photos-premium/champ-champ-fleurs-montagnes-arriere-plan_885092-89.jpg?w=360')]"></div>
          </div>
@@ -58,7 +63,7 @@ export default function Home() {
           </div>
          </div>
           </div>
-          <div className='w-full h-[800px] sm:h-[1100px] bg-black flex items-center justify-evenly flex-col'>
+          <div className='w-full h-[800px] sm:h-[1100px] flex dark:bg-black bg-slate-400 flex items-center justify-evenly flex-col'>
     <a className='text-white font-bold text-2xl'>ХАМТРАГЧ БАЙГУУЛЛАГА</a>
     <div className='h-full xl:h-[40%] lg:h-[40%] md:h-[40%] w-[90%] gap-2 grid xl:grid-cols-6 lg:grid-cols-6 md:grid-cols-6 grid-cols-1'>
       <div className="flex bg-[url('https://centraltv.mn/wp-content/uploads/2022/06/1.png')] bg-no-repeat"></div>
